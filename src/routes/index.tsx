@@ -5,6 +5,7 @@ import { HOME_PAGE_ROUTES } from 'src/pages/Home/routes';
 import Dashboard from 'src/layout/Dashboard';
 import Home from 'src/pages/Home/Home';
 
+// added comment
 const Router: React.FC = () => {
     return useRoutes([
         {
