@@ -1,7 +1,5 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import { HOME_PAGE_ROUTES } from 'src/pages/Home/routes';
-
 import Dashboard from 'src/layout/Dashboard';
 import Home from 'src/pages/Home/Home';
 
@@ -12,14 +10,14 @@ const Router: React.FC = () => {
             path: '/',
             element: <Dashboard />,
             children: [
-                {
-                    element: <Navigate to={HOME_PAGE_ROUTES.index} replace />,
-                    index: true
-                },
-                {
-                    path: HOME_PAGE_ROUTES.index,
-                    element: <Home />
-                }
+                // {
+                //     element: <Navigate to={HOME_PAGE_ROUTES.index} replace />,
+                //     index: true
+                // },
+                // {
+                //     path: HOME_PAGE_ROUTES.index,
+                //     element: <Home />
+                // }
             ]
         }
     ]);

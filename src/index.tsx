@@ -1,19 +1,20 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-// import App from './App.tsx';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { theme } from './theme/index';
+import { ThemeProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 root.render(
-    <React.StrictMode>
+    <ThemeProvider theme={theme}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </React.StrictMode>
+    </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
