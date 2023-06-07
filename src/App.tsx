@@ -1,13 +1,19 @@
-import { useTheme } from '@mui/material';
+import { useTheme, Box } from '@mui/material';
+
 import Router from './routes';
 
 const App: React.FC = () => {
     const theme = useTheme();
     console.log('theme', theme);
     return (
-        <div>
+        <Box
+            sx={{
+                // background: theme.palette.custom.background,
+                height: '100vh'
+            }}
+        >
             <Router />
-        </div>
+        </Box>
     );
 };
 

@@ -1,9 +1,10 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 
 import Dashboard from 'src/layout/Dashboard';
-import Home from 'src/pages/Home/Home';
+// import Home from 'src/pages/Home/Home';
+import Login from 'src/pages/login/Login';
+import NotFoundPage from 'src/pages/notFoundPage/NotFoundPage';
 
-// added comment
 const Router: React.FC = () => {
     return useRoutes([
         {
@@ -19,6 +20,14 @@ const Router: React.FC = () => {
                 //     element: <Home />
                 // }
             ]
+        },
+        {
+            path: '/login',
+            element: <Login />
+        },
+        {
+            path: '*',
+            element: <NotFoundPage />
         }
     ]);
 };

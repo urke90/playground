@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { theme } from './theme/index';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -11,6 +11,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <ThemeProvider theme={theme}>
+        <CssBaseline />
         <BrowserRouter>
             <App />
         </BrowserRouter>
